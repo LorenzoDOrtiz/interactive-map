@@ -1,0 +1,14 @@
+<!-- app-navbar component -->
+<app-navbar></app-navbar>
+
+<div class="wrapper">
+    <!-- router-outlet directive -->
+    <!-- This is an Angular Router directive. It acts as a placeholder that Angular dynamically fills based on the current router state. -->
+    <!-- It's where your routed components will be displayed. -->
+    <router-outlet></router-outlet>
+
+    <!-- app-information component -->
+    <!-- This is your custom component for displaying information. -->
+    <!-- The #infoComponent is a template reference variable, allowing you to reference this instance of the app-information component in your template. -->
+    <app-information #infoComponent></app-information>
+</div>

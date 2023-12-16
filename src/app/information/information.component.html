@@ -1,0 +1,25 @@
+<!-- Card Container -->
+<div class="card bg-primary bg3" style="width: 18rem;">
+  <!-- Card Header -->
+  <div class="card-header">
+    Country Information
+  </div>
+
+  <!-- List Group for Country Information -->
+  <!-- This list is only displayed if countryInfo has a value (i.e., if a country is selected) -->
+  <ul class="list-group list-group-flush" *ngIf="countryInfo">
+    <!-- Each list item displays a piece of information about the selected country -->
+    <li class="list-group-item">Name: {{ countryInfo.name }}</li>
+    <li class="list-group-item">Capital: {{ countryInfo.capitalCity }}</li>
+    <li class="list-group-item">Region: {{ countryInfo.region?.value }}</li>
+    <li class="list-group-item">Income Level: {{ countryInfo.incomeLevel?.value }}</li>
+    <li class="list-group-item">Latitude: {{ countryInfo.latitude }}</li>
+    <li class="list-group-item">Longitude: {{ countryInfo.longitude }}</li>
+  </ul>
+
+  <!-- Fallback Text -->
+  <!-- This div is displayed only if countryInfo is null or undefined (i.e., no country is selected) -->
+  <div *ngIf="!countryInfo" class="list-group-item text-center text-danger fw-bold">
+    Select a country to see its information.
+  </div>
+</div>
